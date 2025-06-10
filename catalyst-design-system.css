@@ -153,6 +153,7 @@
     display: flex;
     gap: var(--space-2xl);
     list-style: none;
+    margin-right: var(--space-3xl);
 }
 
 .nav-link {

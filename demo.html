@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalyst Design System - Demo</title>
+    <link rel="stylesheet" href="catalyst-design-system.css">
+    <style>
+        /* Demo-specific styles */
+        html {
+            font-size: 10px; /* Set base font size for rem units */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--neutral-light);
+            color: var(--neutral-gray-800);
+            font-size: var(--font-size-base);
+        }
+        
+        .demo-section {
+            margin-bottom: var(--space-4xl);
+            padding: var(--space-2xl);
+            background: var(--neutral-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .demo-header {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--primary-main);
+            margin-bottom: var(--space-lg);
+            border-bottom: 2px solid var(--neutral-gray-200);
+            padding-bottom: var(--space-sm);
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .color-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .color-swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 2px solid var(--neutral-gray-200);
+        }
+        
+        .color-info {
+            font-size: var(--font-size-sm);
+            color: var(--neutral-gray-600);
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+        
+        .spacing-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            align-items: flex-end;
+        }
+        
+        .spacing-item {
+            background: var(--accent-blue);
+            color: var(--neutral-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+        }
+        
+        .shadow-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .shadow-item {
+            background: var(--neutral-white);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-size: var(--font-size-sm);
+            color: var(--neutral-gray-600);
+        }
+        
+        .typography-demo h1, .typography-demo h2, .typography-demo h3 {
+            margin: var(--space-sm) 0;
+        }
+        
+        /* Custom demo navbar spacing */
+        .demo-navbar {
+            position: relative;
+            margin-bottom: var(--space-xl);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar Demo -->
+    <nav class="navbar demo-navbar">
+        <div class="logo">
+            <span class="gradient-text" style="font-size: var(--font-size-2xl); font-weight: 700;">Catalyst</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Components</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="section text-center">
+                <h1 class="section-title animate-fade-in-up">Catalyst Design System</h1>
+                <p style="font-size: var(--font-size-xl); color: var(--neutral-gray-600); margin-bottom: var(--space-2xl);">
+                    A comprehensive demo showcasing all design system components
+                </p>
+                <div class="flex-center" style="gap: var(--space-lg);">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </section>
+
+            <!-- Color Palette Section -->
+            <div class="demo-section">
+                <h2 class="demo-header">Color Palette & Design Tokens</h2>
+                
+                <h3 style="margin-top: var(--space-xl);">Primary Colors</h3>
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--primary-dark);"></div>
+                        <div class="color-info">Primary Dark<br><code>--primary-dark</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--primary-main);"></div>
+                        <div class="color-info">Primary Main<br><code>--primary-main</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--primary-light);"></div>
+                        <div class="color-info">Primary Light<br><code>--primary-light</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--accent-blue);"></div>
+                        <div class="color-info">Accent Blue<br><code>--accent-blue</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--accent-teal);"></div>
+                        <div class="color-info">Accent Teal<br><code>--accent-teal</code></div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: var(--space-xl);">Neutral Colors</h3>
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--neutral-white);"></div>
+                        <div class="color-info">White<br><code>--neutral-white</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--neutral-gray-100);"></div>
+                        <div class="color-info">Gray 100<br><code>--neutral-gray-100</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--neutral-gray-300);"></div>
+                        <div class="color-info">Gray 300<br><code>--neutral-gray-300</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--neutral-gray-500);"></div>
+                        <div class="color-info">Gray 500<br><code>--neutral-gray-500</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--neutral-gray-700);"></div>
+                        <div class="color-info">Gray 700<br><code>--neutral-gray-700</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--neutral-gray-900);"></div>
+                        <div class="color-info">Gray 900<br><code>--neutral-gray-900</code></div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: var(--space-xl);">Gradients</h3>
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--gradient-primary);"></div>
+                        <div class="color-info">Primary Gradient<br><code>--gradient-primary</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--gradient-accent);"></div>
+                        <div class="color-info">Accent Gradient<br><code>--gradient-accent</code></div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: var(--gradient-light);"></div>
+                        <div class="color-info">Light Gradient<br><code>--gradient-light</code></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typography Section -->
+            <div class="demo-section">
+                <h2 class="demo-header">Typography Scale</h2>
+                <div class="typography-demo">
+                    <h1 style="font-size: var(--font-size-5xl); margin: var(--space-sm) 0;">Heading 5XL (4.8rem)</h1>
+                    <h1 style="font-size: var(--font-size-4xl); margin: var(--space-sm) 0;">Heading 4XL (3.6rem)</h1>
+                    <h2 style="font-size: var(--font-size-3xl); margin: var(--space-sm) 0;">Heading 3XL (3rem)</h2>
+                    <h2 style="font-size: var(--font-size-2xl); margin: var(--space-sm) 0;">Heading 2XL (2.4rem)</h2>
+                    <h3 style="font-size: var(--font-size-xl); margin: var(--space-sm) 0;">Heading XL (2rem)</h3>
+                    <h3 style="font-size: var(--font-size-lg); margin: var(--space-sm) 0;">Heading LG (1.8rem)</h3>
+                    <p style="font-size: var(--font-size-base); margin: var(--space-sm) 0;">Body Base (1.6rem) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p style="font-size: var(--font-size-sm); margin: var(--space-sm) 0;">Body SM (1.4rem) - Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p style="font-size: var(--font-size-xs); margin: var(--space-sm) 0;">Body XS (1.2rem) - Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+                
+                <div style="margin-top: var(--space-xl);">
+                    <h3>Gradient Text Effect</h3>
+                    <p class="gradient-text" style="font-size: var(--font-size-2xl); font-weight: 700;">Beautiful gradient text effect</p>
+                </div>
+            </div>
+
+            <!-- Button System -->
+            <div class="demo-section">
+                <h2 class="demo-header">Button System</h2>
+                <div class="component-grid">
+                    <div style="text-align: center;">
+                        <h4>Primary Button</h4>
+                        <button class="btn btn-primary">Primary Action</button>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4>Secondary Button</h4>
+                        <button class="btn btn-secondary">Secondary Action</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card System -->
+            <div class="demo-section">
+                <h2 class="demo-header">Card System</h2>
+                <div class="component-grid">
+                    <div class="card">
+                        <h3>Standard Card</h3>
+                        <p>This is a standard card component with hover effects. It includes shadow, rounded corners, and smooth transitions.</p>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                    <div class="content-card">
+                        <h3>Content Card</h3>
+                        <p>This is a content card variant with slightly different styling and padding optimized for text content.</p>
+                        <div class="tag tag-accent">Featured</div>
+                    </div>
+                    <div class="card">
+                        <h3>Interactive Card</h3>
+                        <p>Cards have hover effects that provide visual feedback when users interact with them.</p>
+                        <div style="display: flex; gap: var(--space-sm); margin-top: var(--space-md);">
+                            <div class="tag">Design</div>
+                            <div class="tag">System</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tag System -->
+            <div class="demo-section">
+                <h2 class="demo-header">Tag System</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-md);">
+                    <div class="tag">Default Tag</div>
+                    <div class="tag tag-accent">Accent Tag</div>
+                    <div class="tag">React</div>
+                    <div class="tag">TypeScript</div>
+                    <div class="tag tag-accent">Featured</div>
+                    <div class="tag">UI/UX</div>
+                    <div class="tag">Design System</div>
+                </div>
+            </div>
+
+            <!-- Icon Buttons -->
+            <div class="demo-section">
+                <h2 class="demo-header">Icon Buttons</h2>
+                <div style="display: flex; gap: var(--space-lg); flex-wrap: wrap;">
+                    <div class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 5.16-1 9-5.45 9-11V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <div class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <div class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <div class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid System -->
+            <div class="demo-section">
+                <h2 class="demo-header">Grid System</h2>
+                
+                <h4>Single Column Grid</h4>
+                <div class="grid grid-1">
+                    <div class="card">
+                        <h4>Full Width Item</h4>
+                        <p>This takes up the full width of the container.</p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: var(--space-xl);">Two Column Grid</h4>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <h4>Item 1</h4>
+                        <p>First item in two-column layout.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Item 2</h4>
+                        <p>Second item in two-column layout.</p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: var(--space-xl);">Three Column Grid</h4>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h4>Item 1</h4>
+                        <p>First item in three-column layout.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Item 2</h4>
+                        <p>Second item in three-column layout.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Item 3</h4>
+                        <p>Third item in three-column layout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacing Scale -->
+            <div class="demo-section">
+                <h2 class="demo-header">Spacing Scale</h2>
+                <div class="spacing-demo">
+                    <div class="spacing-item" style="width: var(--space-xs); height: var(--space-xs);">XS</div>
+                    <div class="spacing-item" style="width: var(--space-sm); height: var(--space-sm);">SM</div>
+                    <div class="spacing-item" style="width: var(--space-md); height: var(--space-md);">MD</div>
+                    <div class="spacing-item" style="width: var(--space-lg); height: var(--space-lg);">LG</div>
+                    <div class="spacing-item" style="width: var(--space-xl); height: var(--space-xl);">XL</div>
+                    <div class="spacing-item" style="width: var(--space-2xl); height: var(--space-2xl);">2XL</div>
+                    <div class="spacing-item" style="width: var(--space-3xl); height: var(--space-3xl);">3XL</div>
+                </div>
+            </div>
+
+            <!-- Shadow System -->
+            <div class="demo-section">
+                <h2 class="demo-header">Shadow System</h2>
+                <div class="shadow-demo">
+                    <div class="shadow-item" style="box-shadow: var(--shadow-sm);">
+                        Small Shadow<br>
+                        <code>--shadow-sm</code>
+                    </div>
+                    <div class="shadow-item" style="box-shadow: var(--shadow-md);">
+                        Medium Shadow<br>
+                        <code>--shadow-md</code>
+                    </div>
+                    <div class="shadow-item" style="box-shadow: var(--shadow-lg);">
+                        Large Shadow<br>
+                        <code>--shadow-lg</code>
+                    </div>
+                    <div class="shadow-item" style="box-shadow: var(--shadow-xl);">
+                        Extra Large Shadow<br>
+                        <code>--shadow-xl</code>
+                    </div>
+                    <div class="shadow-item" style="box-shadow: var(--shadow-2xl);">
+                        2XL Shadow<br>
+                        <code>--shadow-2xl</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Border Radius -->
+            <div class="demo-section">
+                <h2 class="demo-header">Border Radius Scale</h2>
+                <div class="component-grid">
+                    <div style="background: var(--accent-blue); color: white; padding: var(--space-lg); border-radius: var(--radius-sm); text-align: center;">
+                        Small Radius<br><code>--radius-sm</code>
+                    </div>
+                    <div style="background: var(--accent-blue); color: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
+                        Medium Radius<br><code>--radius-md</code>
+                    </div>
+                    <div style="background: var(--accent-blue); color: white; padding: var(--space-lg); border-radius: var(--radius-lg); text-align: center;">
+                        Large Radius<br><code>--radius-lg</code>
+                    </div>
+                    <div style="background: var(--accent-blue); color: white; padding: var(--space-lg); border-radius: var(--radius-xl); text-align: center;">
+                        Extra Large Radius<br><code>--radius-xl</code>
+                    </div>
+                    <div style="background: var(--accent-blue); color: white; padding: var(--space-lg); border-radius: var(--radius-full); text-align: center;">
+                        Full Radius<br><code>--radius-full</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animation Demo -->
+            <div class="demo-section">
+                <h2 class="demo-header">Animation System</h2>
+                <div class="card animate-fade-in-up">
+                    <h3>Fade In Up Animation</h3>
+                    <p>This card uses the <code>.animate-fade-in-up</code> class for a smooth entrance animation.</p>
+                    <button class="btn btn-secondary">Animated Element</button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="section text-center" style="background: var(--gradient-primary); color: white; border-radius: var(--radius-xl);">
+                <h3>Catalyst Design System</h3>
+                <p>A modern, comprehensive design system for building beautiful user interfaces.</p>
+                <div style="margin-top: var(--space-lg);">
+                    <button class="btn" style="background: white; color: var(--primary-main);">Documentation</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
