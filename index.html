@@ -428,6 +428,202 @@
                 </div>
             </div>
 
+            <!-- Form Components -->
+            <div class="demo-section">
+                <h2 class="demo-header">Form Components</h2>
+                
+                <form style="max-width: 60rem; margin: 0 auto;">
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" class="input" placeholder="Enter your first name">
+                            <div class="form-help">This field is required</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" class="input" placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="input input-success" placeholder="Enter your email" value="user@example.com">
+                        <div class="form-help" style="color: var(--color-success);">✓ Email address is valid</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="input input-error" placeholder="Enter your password">
+                        <div class="form-error">Password must be at least 8 characters long</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country" class="form-label">Country</label>
+                        <select id="country" class="select">
+                            <option value="">Select your country</option>
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="textarea" placeholder="Enter your message here..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4 style="margin-bottom: var(--space-md);">Preferences</h4>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" class="checkbox" checked>
+                            <label for="newsletter" class="checkbox-label">Subscribe to newsletter</label>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="updates" class="checkbox">
+                            <label for="updates" class="checkbox-label">Receive product updates</label>
+                        </div>
+                        
+                        <div style="margin-top: var(--space-lg);">
+                            <h5 style="margin-bottom: var(--space-sm);">Account Type</h5>
+                            <div class="radio-group">
+                                <input type="radio" id="personal" name="accountType" class="radio" checked>
+                                <label for="personal" class="radio-label">Personal</label>
+                            </div>
+                            
+                            <div class="radio-group">
+                                <input type="radio" id="business" name="accountType" class="radio">
+                                <label for="business" class="radio-label">Business</label>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: var(--space-lg);">
+                            <div style="display: flex; align-items: center; gap: var(--space-md);">
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <span>Enable notifications</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div style="display: flex; gap: var(--space-md);">
+                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Alert System -->
+            <div class="demo-section">
+                <h2 class="demo-header">Alert & Notification System</h2>
+                
+                <h4 style="margin-bottom: var(--space-lg);">Alert Components</h4>
+                
+                <div class="alert alert-success">
+                    <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div class="alert-content">
+                        <div class="alert-title">Success!</div>
+                        <p class="alert-message">Your changes have been saved successfully.</p>
+                    </div>
+                    <button class="alert-close">×</button>
+                </div>
+                
+                <div class="alert alert-warning">
+                    <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                    <div class="alert-content">
+                        <div class="alert-title">Warning</div>
+                        <p class="alert-message">Please review your information before proceeding.</p>
+                    </div>
+                    <button class="alert-close">×</button>
+                </div>
+                
+                <div class="alert alert-error">
+                    <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div class="alert-content">
+                        <div class="alert-title">Error</div>
+                        <p class="alert-message">There was an error processing your request. Please try again.</p>
+                    </div>
+                    <button class="alert-close">×</button>
+                </div>
+                
+                <div class="alert alert-info">
+                    <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div class="alert-content">
+                        <div class="alert-title">Information</div>
+                        <p class="alert-message">This feature will be available in the next update.</p>
+                    </div>
+                    <button class="alert-close">×</button>
+                </div>
+                
+                <h4 style="margin: var(--space-2xl) 0 var(--space-lg) 0;">Toast Notifications</h4>
+                <p style="margin-bottom: var(--space-lg); color: var(--neutral-gray-600);">
+                    Click the buttons below to see toast notifications in action:
+                </p>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-xl);">
+                    <button class="btn btn-primary" onclick="showToast('success')">Success Toast</button>
+                    <button class="btn btn-secondary" onclick="showToast('warning')">Warning Toast</button>
+                    <button class="btn" style="background: var(--color-error); color: white;" onclick="showToast('error')">Error Toast</button>
+                    <button class="btn" style="background: var(--accent-blue); color: white;" onclick="showToast('info')">Info Toast</button>
+                </div>
+                
+                <h4 style="margin: var(--space-2xl) 0 var(--space-lg) 0;">Notification Badges</h4>
+                
+                <div style="display: flex; gap: var(--space-xl); align-items: center; flex-wrap: wrap;">
+                    <div class="notification">
+                        <div class="icon-btn">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM6 2v20l5-5h7a2 2 0 002-2V4a2 2 0 00-2-2H6z"></path>
+                            </svg>
+                        </div>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    
+                    <div class="notification">
+                        <div class="icon-btn">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <span class="notification-badge notification-badge-success">12</span>
+                    </div>
+                    
+                    <div class="notification">
+                        <div class="icon-btn">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="notification-badge notification-badge-warning">!</span>
+                    </div>
+                    
+                    <div class="notification">
+                        <div class="icon-btn">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="notification-badge notification-badge-info">99+</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Animation Demo -->
             <div class="demo-section">
                 <h2 class="demo-header">Animation System</h2>
@@ -448,5 +644,80 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        // Toast notification functionality
+        function showToast(type) {
+            // Remove any existing toasts
+            const existingToasts = document.querySelectorAll('.toast');
+            existingToasts.forEach(toast => toast.remove());
+            
+            const icons = {
+                success: '<svg class="toast-icon" fill="none" stroke="#10b981" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+                warning: '<svg class="toast-icon" fill="none" stroke="#f59e0b" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>',
+                error: '<svg class="toast-icon" fill="none" stroke="#ef4444" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>',
+                info: '<svg class="toast-icon" fill="none" stroke="#0ea5e9" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+            };
+            
+            const messages = {
+                success: { title: 'Success!', message: 'Operation completed successfully.' },
+                warning: { title: 'Warning', message: 'Please check your input and try again.' },
+                error: { title: 'Error', message: 'Something went wrong. Please try again.' },
+                info: { title: 'Info', message: 'Here\'s some useful information for you.' }
+            };
+            
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.innerHTML = `
+                ${icons[type]}
+                <div class="toast-content">
+                    <div class="toast-title">${messages[type].title}</div>
+                    <p class="toast-message">${messages[type].message}</p>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+            `;
+            
+            document.body.appendChild(toast);
+            
+            // Auto-remove toast after 5 seconds
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.style.animation = 'slideOutRight 0.3s ease forwards';
+                    setTimeout(() => toast.remove(), 300);
+                }
+            }, 5000);
+        }
+        
+        // Alert close functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const alertCloseButtons = document.querySelectorAll('.alert-close');
+            alertCloseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const alert = this.closest('.alert');
+                    alert.style.opacity = '0';
+                    alert.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        alert.style.display = 'none';
+                    }, 300);
+                });
+            });
+        });
+        
+        // Add slideOutRight animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 
 ![Color Palette](assets/color-palette.jpg)
 ![Button Components](assets/button.jpg)
+![Form Components](assets/form.jpg)
+![Alert Components](assets/alert.jpg)
 
 A clean, modern, and reusable CSS design system built with CSS custom properties (variables) and component patterns. Catalyst provides a comprehensive set of design tokens, UI components, and utilities for building consistent and beautiful web interfaces.
 
