@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;300;400;500;600&display=swap');
+
 /* Design System - Reusable UI Patterns */
 
 /* ===========================================
@@ -11,11 +14,11 @@
     --color-error: #ef4444;
     
     /* Primary Colors */
-    --primary-dark: #1a1a2e;
-    --primary-main: #16213e;
-    --primary-light: #0f3460;
-    --accent-color-1: #4E2A84;
-    --accent-color-2: #ac46a1;
+    --primary-dark: #11001c;
+    --primary-main: #290025;
+    --primary-light: #35012c;
+    --accent-color-1: #4d194d;
+    --accent-color-2: #1b3a4b;
     
     /* Neutral Colors */
     --neutral-white: #ffffff;
@@ -36,6 +39,7 @@
     --gradient-light: linear-gradient(135deg, var(--neutral-white) 0%, var(--neutral-light) 100%);
     
     /* Typography Scale */
+    --font-family-base: 'Poppins', sans-serif;
     --font-size-xs: 1.2rem;
     --font-size-sm: 1.4rem;
     --font-size-base: 1.6rem;
@@ -75,6 +79,32 @@
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
 }
+
+/* ===========================================
+   BASE TYPOGRAPHY
+   =========================================== */
+
+/* Apply Poppins to all elements */
+*, *::before, *::after {
+    font-family: var(--font-family-base);
+}
+
+/* Specific typography improvements for Poppins */
+body {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+
 
 /* ===========================================
    COMPONENT PATTERNS
