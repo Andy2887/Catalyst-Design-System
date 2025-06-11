@@ -14,8 +14,8 @@
     --primary-dark: #1a1a2e;
     --primary-main: #16213e;
     --primary-light: #0f3460;
-    --accent-blue: #0ea5e9;
-    --accent-teal: #14b8a6;
+    --accent-color-1: #4E2A84;
+    --accent-color-2: #ac46a1;
     
     /* Neutral Colors */
     --neutral-white: #ffffff;
@@ -32,7 +32,7 @@
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-main) 0%, var(--primary-light) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-teal) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-color-1) 0%, var(--accent-color-2) 100%);
     --gradient-light: linear-gradient(135deg, var(--neutral-white) 0%, var(--neutral-light) 100%);
     
     /* Typography Scale */
@@ -127,12 +127,12 @@
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--accent-blue);
-    border: 2px solid var(--accent-blue);
+    color: var(--accent-color-1);
+    border: 2px solid var(--accent-color-1);
 }
 
 .btn-secondary:hover {
-    background: var(--accent-blue);
+    background: var(--accent-color-1);
     color: var(--neutral-white);
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
@@ -186,7 +186,7 @@
 }
 
 .nav-link:hover {
-    color: var(--accent-blue);
+    color: var(--accent-color-1);
     background-color: rgba(14, 165, 233, 0.1);
 }
 
@@ -282,7 +282,7 @@
 }
 
 .input:focus, .textarea:focus, .select:focus {
-    border-color: var(--accent-blue);
+    border-color: var(--accent-color-1);
     box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
 }
 
@@ -387,8 +387,8 @@
 }
 
 .checkbox:checked, .radio:checked {
-    background-color: var(--accent-blue);
-    border-color: var(--accent-blue);
+    background-color: var(--accent-color-1);
+    border-color: var(--accent-color-1);
 }
 
 .checkbox:checked::after {
@@ -415,7 +415,7 @@
 }
 
 .checkbox:focus, .radio:focus {
-    outline: 2px solid var(--accent-blue);
+    outline: 2px solid var(--accent-color-1);
     outline-offset: 2px;
 }
 
@@ -465,7 +465,7 @@
 }
 
 .toggle input:checked + .toggle-slider {
-    background-color: var(--accent-blue);
+    background-color: var(--accent-color-1);
 }
 
 .toggle input:checked + .toggle-slider:before {
@@ -552,7 +552,7 @@
 
 .alert-info {
     background-color: rgba(14, 165, 233, 0.1);
-    border-color: var(--accent-blue);
+    border-color: var(--accent-color-1);
     color: #1e40af;
 }
 
@@ -599,7 +599,7 @@
 }
 
 .toast-info {
-    border-left: 4px solid var(--accent-blue);
+    border-left: 4px solid var(--accent-color-1);
 }
 
 .toast-icon {
@@ -672,7 +672,7 @@
 }
 
 .notification-badge-info {
-    background-color: var(--accent-blue);
+    background-color: var(--accent-color-1);
 }
 
 /* Grid System */

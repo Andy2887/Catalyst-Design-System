@@ -10,7 +10,9 @@ A clean, modern, and reusable CSS design system built with CSS custom properties
 ## ✨ Features
 
 - **🎨 Comprehensive Design Tokens** - Colors, typography, spacing, shadows, and more
-- **🧩 Reusable Component Patterns** - Cards, buttons, navigation, tags, and layout utilities
+- **🧩 Reusable Component Patterns** - Cards, buttons, navigation, forms, alerts, tags, and layout utilities
+- **📝 Complete Form System** - Input fields, checkboxes, radio buttons, toggles, validation states
+- **🚨 Alert & Notification System** - Alerts, toast notifications, and notification badges
 - **📱 Mobile-First Responsive Design** - Built with mobile responsiveness in mind
 - **⚡ Modern CSS Features** - CSS Grid, Flexbox, custom properties, and gradients
 - **🎭 Smooth Animations** - Hover effects, transitions, and keyframe animations
@@ -21,7 +23,8 @@ A clean, modern, and reusable CSS design system built with CSS custom properties
 
 ### Color Palette
 - **Primary Colors**: Dark navy theme with `--primary-dark`, `--primary-main`, `--primary-light`
-- **Accent Colors**: Modern blue and teal with `--accent-blue`, `--accent-teal`
+- **Accent Colors**: Flexible accent system with `--accent-color-1`, `--accent-color-2` for easy color swapping
+- **Semantic Colors**: Status colors with `--color-success`, `--color-warning`, `--color-error`
 - **Neutral Colors**: Complete grayscale from white to dark with proper contrast ratios
 - **Gradients**: Beautiful preset gradients for primary, accent, and light themes
 
@@ -85,6 +88,62 @@ Five levels of shadows from subtle to dramatic, plus smooth transitions
 <span class="tag tag-accent">Accent Tag</span>
 ```
 
+### Forms
+```html
+<!-- Input fields with validation states -->
+<div class="form-group">
+  <label for="email" class="form-label">Email</label>
+  <input type="email" id="email" class="input input-success" placeholder="Enter email">
+  <div class="form-help">Email is valid</div>
+</div>
+
+<!-- Checkbox and radio buttons -->
+<div class="checkbox-group">
+  <input type="checkbox" id="newsletter" class="checkbox" checked>
+  <label for="newsletter" class="checkbox-label">Subscribe to newsletter</label>
+</div>
+
+<div class="radio-group">
+  <input type="radio" id="option1" name="options" class="radio">
+  <label for="option1" class="radio-label">Option 1</label>
+</div>
+
+<!-- Toggle switch -->
+<label class="toggle">
+  <input type="checkbox" checked>
+  <span class="toggle-slider"></span>
+</label>
+```
+
+### Alerts & Notifications
+```html
+<!-- Alert components -->
+<div class="alert alert-success">
+  <svg class="alert-icon"><!-- Success icon --></svg>
+  <div class="alert-content">
+    <div class="alert-title">Success!</div>
+    <p class="alert-message">Operation completed successfully.</p>
+  </div>
+  <button class="alert-close">×</button>
+</div>
+
+<!-- Toast notifications (triggered via JavaScript) -->
+<div class="toast toast-info">
+  <svg class="toast-icon"><!-- Info icon --></svg>
+  <div class="toast-content">
+    <div class="toast-title">Information</div>
+    <p class="toast-message">Here's some useful information.</p>
+  </div>
+  <button class="toast-close">×</button>
+</div>
+
+<!-- Notification badges -->
+<div class="notification">
+  <div class="icon-btn"><!-- Icon --></div>
+  <span class="notification-badge">3</span>
+</div>
+```
+
 ## 📐 Layout System
 
 ### Grid System
@@ -129,6 +188,24 @@ The design system uses CSS custom properties for transition timing:
 - `--transition-normal`: 0.3s ease  
 - `--transition-slow`: 0.5s ease
 
+## 🎯 Interactive Features
+
+### Form Validation
+- **Visual States**: Success, error, and focus states for all form elements
+- **Consistent Styling**: All form controls follow the same design patterns
+- **Accessibility**: Proper focus indicators and semantic markup
+
+### Toast Notifications
+- **Auto-dismiss**: Notifications automatically disappear after 5 seconds
+- **Manual Close**: Users can manually dismiss notifications
+- **Slide Animations**: Smooth slide-in/slide-out animations
+- **Multiple Types**: Success, warning, error, and info variants
+
+### Alert System
+- **Dismissible**: Alerts can be closed with smooth fade animations
+- **Icon Support**: Built-in support for SVG icons
+- **Semantic Colors**: Color-coded for different message types
+
 ## 📱 Responsive Design
 
 Catalyst is mobile-first and includes:
@@ -142,7 +219,8 @@ Catalyst is mobile-first and includes:
 ```css
 :root {
   /* Override any design token */
-  --accent-blue: #your-color;
+  --accent-color-1: #your-color;
+  --accent-color-2: #your-other-color;
   --space-lg: 3rem;
   --radius-md: 0.5rem;
 }
@@ -153,7 +231,7 @@ Catalyst is mobile-first and includes:
 /* Create your own component variants */
 .card-special {
   @extend .card;
-  border: 2px solid var(--accent-blue);
+  border: 2px solid var(--accent-color-1);
 }
 ```
 
